@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	window.onload = function(){
+		function Person(name,gender,age){
+/* 			let _name = name
+			let _gender = gender
+			let _age
+			this.getName = function(){
+				return _name
+			}
+			this.getGender = function(){
+				return _gender
+			}
+			this.setAge = function(age){
+				_age = age
+			}
+			this.getAge = function(){
+				return _age
+			}
+			this.toString = function(){
+				return `${person.getName()}(${person.getGender()})(${person.getAge()}세)`
+			}
+		} */
+		Person.prototype.getName = function(){return _name}
+		Person.prototype.getGender = function(){return _gender}
+		Person.prototype.setAge = function(age){_age = age}
+		Person.prototype.getAge = function(){return _age}
+		Person.prototype.toString = function(){return `${person.getName()}(${person.getGender()})(${person.getAge()}세)`}
+			let person = new Person('홍길동','남')
+			person.setAge(20)
+			alert(person.toString())
+	}
+}
+</script>
+</body>
+</html>
